@@ -11,7 +11,8 @@ python run_generator.py generate-latent-walk --network=network.pkl \
 ```
 The images are saved in the results directory and can be written to a video with ffmpeg, like:
 ```
-ffmpeg -r 30 -i ./results/00001-generate-latent-walk/step%05d.png -vcodec libx264 -pix_fmt yuv420p latent-walk.mp4
+ffmpeg -r 30 -i ./results/00001-generate-latent-walk/step%05d.png \
+  -vcodec libx264 -pix_fmt yuv420p latent-walk.mp4
 ```
 
 ### Create Real Image Projection Videos
