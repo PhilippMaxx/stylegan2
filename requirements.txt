@@ -1,0 +1,8 @@
+tensorflow-gpu==1.15.0
+Pillow==7.1.2
+requests==2.23.0
+tqdm==4.45.0
+opensimplex==0.2
+matplotlib==3.2.1
+imageio==2.8.0
+imageio-ffmpeg==0.4.1

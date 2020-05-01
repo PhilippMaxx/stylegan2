@@ -524,6 +524,7 @@ def create_from_images(tfrecord_dir, image_dir, shuffle):
             else:
                 img = img.transpose([2, 0, 1]) # HWC => CHW
             tfr.add_image(img)
+    return len(image_filenames)
 
 #----------------------------------------------------------------------------
 

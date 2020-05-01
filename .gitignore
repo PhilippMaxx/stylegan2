@@ -5,3 +5,7 @@ __pycache__/
 /datasets/
 /networks/
 /venv/
+/real_images/
+/projection/
+/dnnlib/tflib/_cudacache
+/.ipynb_checkpoints
