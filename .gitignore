@@ -1,3 +1,7 @@
 /.stylegan2-cache/
 __pycache__/
-/.idea
+/.idea/
+/results/
+/datasets/
+/networks/
+/venv/
