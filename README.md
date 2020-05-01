@@ -1,3 +1,26 @@
+## StyleGAN2 Utility Add-Ons
+
+### Create Interpolation Videos
+As an addition to the original `run_generator.py` method, interpolation is implemented. To choose images to interpolate
+ from use the `generate-images` flag to generate examples for your given network seeds. From the resulting images, use
+ the seeds as in the example:
+``` 
+# Generate images and interpolate inbetween
+python run_generator.py generate-latent-walk --network=network.pkl \
+  --seeds=6600,6625,6650,6600 --frames 300 --truncation-psi=0.5
+```
+The images are saved in the results directory and can be written to a video with ffmpeg, like:
+```
+ffmpeg -r 30 -i ./results/00001-generate-latent-walk/step%05d.png -vcodec libx264 -pix_fmt yuv420p latent-walk.mp4
+```
+
+### Create Real Image Projection Videos
+Having real images placed in a directory `run_projector2.py` creates a projection with the network and writes the 
+ snapshots to a video: 
+```
+python run_projector2.py --network=network.pkl --image-dir=real_images --num-images=1
+```
+
 ## StyleGAN2 &mdash; Official TensorFlow Implementation
 
 ![Teaser image](./docs/stylegan2-teaser-1024x256.png)

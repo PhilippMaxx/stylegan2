@@ -7,5 +7,6 @@ __pycache__/
 /venv/
 /real_images/
 /projection/
-/dnnlib/tflib/_cudacache
+/dnnlib/tflib/_cudacache/
 /.ipynb_checkpoints
+/test_nvcc
